@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>SENTINEL - NETWORK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="ui">
+        <h1 class="label">[SENTINEL NETWORK]</h1>
+        <div id="status" class="info-line">AGUARDANDO...</div>
+        <div class="info-line" id="last-packet">PACOTE: AGUARDANDO...</div>
+        <div id="anomaly-container">
+            ANOMALIAS: <span id="anomaly-count">0</span>
+        </div>
+    </div>
+
+    <div id="threat-panel">
+        <h1 class="label">LOG DE AMEAÇAS</h1>
+        <div id="threat-list"></div>
+        <button id="btn-export">[ EXPORTAR CSV ]</button>
+    </div>
+
+    <div id="tooltip">
+        <div id="tooltip-ip"></div>
+        <button id="btn-block">[ NEUTRALIZAR ]</button>
+    </div>
+
+    <script type="importmap">
+        { 
+            "imports": { 
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            } 
+        }
+    </script>
+
+    <script type="module" src="app.js"></script>
+    
+</body> </html>
